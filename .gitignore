@@ -1,0 +1,12 @@
+.env
+__pycache__/
+*.py[cod]
+backend/venv/
+backend/.venv/
+*.egg-info/
+.DS_Store
+
+frontend/node_modules/
+frontend/dist/
+
+audit-report.json
