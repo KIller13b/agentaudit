@@ -96,6 +96,10 @@ GITHUB_TOKEN=ghp_...           # optional — increases GitHub rate limit
 | `/health` | GET | Health check + mode (live/mock) |
 | `/audit` | POST | Audit a GitHub PR by URL |
 | `/audit/contract` | POST | Audit raw Solidity contract code |
+| `/ops` | GET | Ops / monitoring dashboard (served by the backend) |
+| `/ops/stats` | GET | Aggregate metrics (audits, avg score, grade + severity totals) |
+| `/ops/agents` | GET | Agent roster, model, and invocation counts |
+| `/ops/history` | GET | Recent audit records (`?limit=50`) |
 
 **Example — audit a contract:**
 ```bash
@@ -103,6 +107,20 @@ curl -X POST http://localhost:8000/audit/contract \
   -H "Content-Type: application/json" \
   -d '{"code": "pragma solidity ^0.6.0;\ncontract Vault { ... }", "filename": "Vault.sol"}'
 ```
+
+---
+
+## Ops / Monitoring Dashboard
+
+The backend ships its own live operations dashboard at **http://localhost:8000/ops** — no separate build or deploy needed. It auto-refreshes every 3 seconds and shows:
+
+- **Live/mock mode**, active model, and process uptime
+- **Aggregate metrics** — total audits, average score, issues found
+- **Grade distribution** (A–D) and **severity breakdown** (critical → low)
+- **Agent roster** with per-agent invocation counts
+- **Audit history** — timestamp, mode, target, grade, score, severity, and duration
+
+![AgentAudit ops dashboard](./demo/assets/ops.png)
 
 ---
 
@@ -130,6 +148,9 @@ agentaudit/
 │   │   └── solidity.py     # Solidity / Web3 vulnerability scanner
 │   ├── github.py           # PR diff fetcher
 │   ├── models.py           # Pydantic data models
+│   ├── store.py            # In-memory metrics + audit history
+│   ├── static/
+│   │   └── ops.html        # Ops / monitoring dashboard UI
 │   ├── main.py             # FastAPI app + endpoints
 │   └── requirements.txt
 ├── frontend/
