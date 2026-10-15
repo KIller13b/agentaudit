@@ -10,6 +10,14 @@ AgentAudit is an autonomous multi-agent AI security scanner for **Solidity smart
 
 ---
 
+## Demo
+
+![AgentAudit demo — pasting a vulnerable Solidity contract and getting a Grade D audit report with fixes](./demo/assets/demo.gif)
+
+*Real run: paste a vulnerable Solidity contract → 3 agents run in parallel → Grade D report with severity-sorted findings and one-click fixes.*
+
+---
+
 ## How It Works
 
 ```
