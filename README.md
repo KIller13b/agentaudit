@@ -103,7 +103,7 @@ curl -X POST http://localhost:8000/audit/contract \
 | Layer | Technology |
 |---|---|
 | Backend | Python · FastAPI · asyncio |
-| AI Agents | Groq API · Llama 3.3 70B · Qwen 2.5 Coder |
+| AI Agents | Groq API · GPT-OSS 120B · Qwen 3.8 27B |
 | GitHub Integration | GitHub REST API v3 |
 | Frontend | React 18 · TypeScript · Vite · Tailwind CSS v4 |
 | Deployment | Vercel (frontend) · Render (backend) |
