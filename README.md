@@ -148,10 +148,3 @@ agentaudit/
 │   └── audit.py            # Terminal CLI tool
 └── .env.example
 ```
-
----
-
-## Built For
-
-**CASCADE '26 — Flagship Hackathon · TantraFiesta 2026 · IIIT Nagpur**  
-*Track: Agentic AI · Cybersecurity · Web3*
