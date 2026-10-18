@@ -8,6 +8,8 @@ backend/.venv/
 
 frontend/node_modules/
 frontend/dist/
+frontend/.vercel/
+.vercel/
 
 audit-report.json
 

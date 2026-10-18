@@ -15,7 +15,7 @@ export default function Header() {
             3 Agents Active
           </span>
           <span>·</span>
-          <span>Powered by Groq + Qwen/Llama</span>
+          <span>Powered by Groq · GPT-OSS 120B</span>
         </div>
       </div>
     </header>

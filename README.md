@@ -6,7 +6,11 @@ AgentAudit is an autonomous multi-agent AI security scanner for **Solidity smart
 
 ## Live Demo
 
-> **→ [agentaudit.vercel.app](https://agentaudit.vercel.app)** ← *(coming soon)*
+> **App:** [agentaudit-gamma.vercel.app](https://agentaudit-gamma.vercel.app) · **API:** [agentaudit-backend-tutf.onrender.com](https://agentaudit-backend-tutf.onrender.com/docs)
+
+[![AgentAudit live UI](./demo/assets/live.png)](https://agentaudit-gamma.vercel.app)
+
+*Frontend on Vercel · FastAPI backend on Render (free tier — first request may take ~30s to wake).*
 
 ---
 
